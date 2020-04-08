@@ -13,11 +13,7 @@ namespace ApiExcelReader.Conexion
         public DataTable Consulta(string strConsulta)
         {
 
-            //string conexion = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:/Users/dj-de/Documents/Exceles/INF APP FORD.XLSX; Extended Properties = \"Excel 8.0;HDR = YES\"";
-            //string conexion = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:/Users/dj-de/OneDrive/Documentos/Exceles/INF APP FORD.XLSX; Extended Properties = \"Excel 8.0;HDR = YES\"";
-            //conexion de jorge
-            string conexion = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:/Sitios/Exceles/INF APP FORD.XLSX; Extended Properties = \"Excel 8.0;HDR = YES\"";
-
+            string conexion = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:/Users/dj-de/Documents/Exceles/INF APP FORD.XLSX; Extended Properties = \"Excel 8.0;HDR = YES\"";
 
             OleDbConnection conector = new OleDbConnection();
             conector = new OleDbConnection(conexion);
