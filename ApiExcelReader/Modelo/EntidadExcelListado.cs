@@ -7,7 +7,7 @@ namespace ApiExcelReader.Modelo
 {
     public class EntidadExcelListado
     {
-       
+
         public string CODIGO_ORIGINAL { get; set; }
         public string IMAGEN { get; set; }
         public string IMAGEN_BASE64 { get; set; }
@@ -21,6 +21,8 @@ namespace ApiExcelReader.Modelo
         public string imagen_sustituto { get; set; }
         public string costo_sustituto { get; set; }
         public string existtencia { get; set; }
+        public string error { get; set; }
+        public string descripcionError { get; set; }
         
     }
 }
