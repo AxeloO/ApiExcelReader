@@ -7,7 +7,7 @@ namespace ApiExcelReader.Modelo
 {
     public class EntidadExcelListado
     {
-
+        public string CODIGO_INASA { get; set; }
         public string CODIGO_ORIGINAL { get; set; }
         public string IMAGEN { get; set; }
         public string IMAGEN_BASE64 { get; set; }

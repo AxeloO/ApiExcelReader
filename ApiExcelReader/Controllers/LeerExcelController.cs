@@ -53,8 +53,20 @@ namespace ApiExcelReader.Controllers
 
                 if (RespuestaTbConsulta.Rows.Count != 0)
                 {
+                    entidadExcelListado.CODIGO_INASA = RespuestaTbConsulta.Rows[0]["CODIGO_INASA"].ToString();
+                    entidadExcelListado.CODIGO_FORD = RespuestaTbConsulta.Rows[0]["CODIGO_ORIGINAL"].ToString();
+                    entidadExcelListado.IMAGEN = RespuestaTbConsulta.Rows[0]["IMAGEN"].ToString();
+                    entidadExcelListado.IMAGEN_BASE64 = RespuestaTbConsulta.Rows[0]["IMAGEN_BASE64"].ToString();
+                    entidadExcelListado.COSTO_MXN = RespuestaTbConsulta.Rows[0]["COSTO_MXN"].ToString();
+                    entidadExcelListado.ITEM_ALMACEN_FORD = RespuestaTbConsulta.Rows[0]["ITEM_ALMACEN_FORD"].ToString();
                     entidadExcelListado.CODIGO_FORD = RespuestaTbConsulta.Rows[0]["CODIGO_FORD"].ToString();
-                    entidadExcelListado.CODIGO_ORIGINAL = RespuestaTbConsulta.Rows[0]["CODIGO_ORIGINAL"].ToString();
+                    entidadExcelListado.DESCRIP = RespuestaTbConsulta.Rows[0]["DESCRIP"].ToString();
+                    entidadExcelListado.BLANKET = RespuestaTbConsulta.Rows[0]["BLANKET"].ToString();
+                    entidadExcelListado.PRECIO_VENTA = RespuestaTbConsulta.Rows[0]["PRECIO_VENTA"].ToString();
+                    entidadExcelListado.sustituto = RespuestaTbConsulta.Rows[0]["sustituto"].ToString();
+                    entidadExcelListado.imagen_sustituto = RespuestaTbConsulta.Rows[0]["imagen_sustituto"].ToString();
+                    entidadExcelListado.costo_sustituto = RespuestaTbConsulta.Rows[0]["costo_sustituto"].ToString();
+                    entidadExcelListado.existtencia = RespuestaTbConsulta.Rows[0]["existtencia"].ToString();
                     entidadExcelListado.error = "0";
                 }
                 else
