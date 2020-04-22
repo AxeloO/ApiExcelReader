@@ -10,12 +10,23 @@ namespace ApiExcelReader.Conexion
     public class ConexionExcelFiltros
     {
 
-        public DataTable Consulta(string strConsulta)
+        public DataTable Consulta(string strConsulta, int intUbicacion)
         {
-
+            string conexion = string.Empty;
+       
             
-            string conexion = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:/Sitios/Documentos/INF APP FORD.XLSX; Extended Properties = \"Excel 8.0;HDR = YES\"";
 
+            switch (intUbicacion)
+            {
+                case 1:
+                     conexion = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:/Sitios/Documentos/INF APP FORD.XLSX; Extended Properties = \"Excel 8.0;HDR = YES\"";
+                    break;
+                case 2:
+                     conexion = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:/Sitios/Documentos/Login.XLSX; Extended Properties = \"Excel 8.0;HDR = YES\"";
+                    break;
+                default:
+                    break;
+            }
 
             OleDbConnection conector = new OleDbConnection();
             conector = new OleDbConnection(conexion);
